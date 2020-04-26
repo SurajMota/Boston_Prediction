@@ -8,25 +8,25 @@ import pickle
 housing = pd.read_csv("data.csv")
 print(housing.head())
 
-#housing.describe()
-#print(housing.shape)
-#print(housing.columns)
-#print(housing.isnull().sum())
-#print(housing.info())
+housing.describe()
+print(housing.shape)
+print(housing.columns)
+print(housing.isnull().sum())
+print(housing.info())
 
-#%matplotlib inline
-#housing.hist(bins=50,figsize=(20,30),color='green')
-#plt.show()
+%matplotlib inline
+housing.hist(bins=50,figsize=(20,30),color='green')
+plt.show()
 
 
 #Looking for Corelation
-#corr_matrix = housing.corr()
+corr_matrix = housing.corr()
 #corr_percentage = (corr_matrix['MEDV'].sort_values(ascending=False))*100
 #corr_percentage
 
-#fig, ax = plt.subplots(figsize=(18,10))
-#sns.heatmap(corr_matrix, annot=True, fmt='.0%')
-#plt.show()
+fig, ax = plt.subplots(figsize=(18,10))
+sns.heatmap(corr_matrix, annot=True, fmt='.0%')
+plt.show()
 
 #StratifiedShuffleSplit SO THAT TO AVOID COMPLETE 1 OR 0 IN CHAS while in test and train data
 from sklearn.model_selection import StratifiedShuffleSplit
