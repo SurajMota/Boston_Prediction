@@ -27,4 +27,4 @@ def predict():
     return render_template('index.html',prediction_text="MEDV or Price of house in 1000 Dollar will be  {}".format(output))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
